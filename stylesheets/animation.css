@@ -1,0 +1,63 @@
+.main-circle {
+  animation: spin-circle 20s linear infinite;
+}
+
+.main-circle:hover {
+  animation-play-state: paused;
+}
+
+/* Анимация вращения круга*/
+@keyframes spin-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot {
+  transition: background-color 0.8s ease-out, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #c2ff91;
+  transition: background-color 0.1s ease-in;
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+@keyframes pulse-shrink {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes pulse-grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* Классы, запускающие анимацию */
+.big {
+  animation-name: pulse-shrink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.small {
+  animation-name: pulse-grow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}

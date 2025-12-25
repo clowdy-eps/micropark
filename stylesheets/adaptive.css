@@ -1,0 +1,83 @@
+/* === ADAPTIVE.CSS: Планшеты и Телефоны === */
+
+/* --- TABLET (До 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    /* Меняем базу для расчета резины на 1024px */
+    --rubber: calc(100vw / 1024);
+  }
+
+  .grid-container {
+    /* Уменьшаем количество колонок до 3 */
+    grid-template-columns: repeat(3, calc(60 * var(--rubber)));
+    width: 25%;
+  }
+
+  .main-circle {
+    width: calc(600 * var(--rubber));
+    height: calc(600 * var(--rubber));
+  }
+}
+
+/* --- MOBILE (До 768px: iPhone, Android) --- */
+@media (max-width: 768px) {
+  :root {
+    /* Меняем базу для расчета резины на ширину iPhone (414px) */
+    --rubber: calc(100vw / 414);
+  }
+
+  .section_1 {
+    flex-direction: column; /* Вертикальный столб */
+    justify-content: space-between;
+    padding: calc(20 * var(--rubber));
+  }
+
+  .main-circle {
+    /* Сбрасываем абсолютное позиционирование */
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+
+    width: calc(320 * var(--rubber));
+    height: calc(320 * var(--rubber));
+    margin: calc(20 * var(--rubber)) 0;
+
+    /* Ставим в центр потока */
+    order: 2;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: auto;
+
+    /* Сетка растягивается на 6 колонок */
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: calc(40 * var(--rubber));
+    gap: calc(10 * var(--rubber));
+
+    /* Сбрасываем rtl направление */
+    direction: ltr !important;
+    justify-content: center;
+  }
+
+  .left-grid {
+    order: 1; /* Встает сверху */
+    max-height: calc(180 * var(--rubber));
+    overflow: hidden;
+  }
+
+  .right-grid {
+    order: 3; /* Встает снизу */
+    max-height: calc(180 * var(--rubber));
+    overflow: hidden;
+
+    /* Переворачиваем нижнюю сетку, чтобы рамка была зеркальной */
+    transform: rotate(180deg);
+  }
+
+  /* Возвращаем точки в нормальное положение, чтобы тень не перевернулась (если она будет) */
+  .right-grid .dot {
+    transform: rotate(-180deg);
+  }
+}

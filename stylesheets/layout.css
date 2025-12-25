@@ -1,0 +1,1152 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --rubber: calc(100vw / 1920);
+}
+
+body {
+  background-color: #73c431;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* фон макета 1366×768 WXGA */
+/* .pixel-perfect-image {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+} */
+
+/* секция 1 */
+.section_1 {
+  position: relative;
+  overflow: hidden;
+  background-color: #73c431;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 5vw;
+  margin-right: 5vw; */
+}
+
+/* сетка для кругов */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, calc(90 * var(--rubber)));
+  grid-auto-rows: calc(90 * var(--rubber));
+  gap: calc(12 * var(--rubber));
+}
+
+.dot-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.dot {
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: auto;
+}
+
+/* цетральный круг */
+.main-circle {
+  width: calc(1100 * var(--rubber));
+  height: calc(1100 * var(--rubber));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* размеры точек */
+.dot1 {
+  width: calc(30 * var(--rubber));
+  height: calc(30 * var(--rubber));
+  animation-delay: -1.2s;
+}
+
+.dot2 {
+  width: calc(40 * var(--rubber));
+  height: calc(40 * var(--rubber));
+  animation-delay: -0.5s;
+}
+
+.dot3 {
+  width: calc(50 * var(--rubber));
+  height: calc(50 * var(--rubber));
+  animation-delay: -2s;
+}
+
+.dot4 {
+  width: calc(50 * var(--rubber));
+  height: calc(50 * var(--rubber));
+  animation-delay: -3s;
+}
+
+.dot5 {
+  width: calc(80 * var(--rubber));
+  height: calc(80 * var(--rubber));
+  animation-delay: -0.2s;
+}
+
+.dot6 {
+  width: calc(36 * var(--rubber));
+  height: calc(36 * var(--rubber));
+  animation-delay: -1.5s;
+}
+
+.dot7 {
+  width: calc(44 * var(--rubber));
+  height: calc(44 * var(--rubber));
+  animation-delay: -2.2s;
+}
+.dot8 {
+  width: calc(120 * var(--rubber));
+  height: calc(120 * var(--rubber));
+  animation-delay: -0.1s;
+}
+.dot9 {
+  width: calc(20 * var(--rubber));
+  height: calc(20 * var(--rubber));
+  animation-delay: -3.5s;
+}
+.dot10 {
+  width: calc(24 * var(--rubber));
+  height: calc(24 * var(--rubber));
+  animation-delay: -0.8s;
+}
+.dot11 {
+  width: calc(58 * var(--rubber));
+  height: calc(58 * var(--rubber));
+  animation-delay: -1.9s;
+}
+.dot12 {
+  width: calc(60 * var(--rubber));
+  height: calc(60 * var(--rubber));
+  animation-delay: -2.8s;
+}
+.dot13 {
+  width: calc(50 * var(--rubber));
+  height: calc(50 * var(--rubber));
+  animation-delay: -1s;
+}
+.dot14 {
+  width: calc(130 * var(--rubber));
+  height: calc(130 * var(--rubber));
+  animation-delay: -3s;
+}
+.dot15 {
+  width: calc(140 * var(--rubber));
+  height: calc(140 * var(--rubber));
+  animation-delay: 0s;
+}
+.dot16 {
+  width: calc(50 * var(--rubber));
+  height: calc(50 * var(--rubber));
+  animation-delay: -1.4s;
+}
+.dot17 {
+  width: calc(15 * var(--rubber));
+  height: calc(15 * var(--rubber));
+  animation-delay: -2.1s;
+}
+.dot18 {
+  width: calc(45 * var(--rubber));
+  height: calc(45 * var(--rubber));
+  animation-delay: -0.4s;
+}
+.dot19 {
+  width: calc(48 * var(--rubber));
+  height: calc(48 * var(--rubber));
+  animation-delay: -1.7s;
+}
+.dot20 {
+  width: calc(8 * var(--rubber));
+  height: calc(8 * var(--rubber));
+  animation-delay: -2.5s;
+}
+.dot21 {
+  width: calc(20 * var(--rubber));
+  height: calc(20 * var(--rubber));
+  animation-delay: -3.2s;
+}
+.dot22 {
+  width: calc(40 * var(--rubber));
+  height: calc(40 * var(--rubber));
+  animation-delay: -1s;
+}
+.dot23 {
+  width: calc(22 * var(--rubber));
+  height: calc(22 * var(--rubber));
+  animation-delay: -2s;
+}
+.dot24 {
+  width: calc(18 * var(--rubber));
+  height: calc(18 * var(--rubber));
+  animation-delay: -0.5s;
+}
+.dot25 {
+  width: calc(12 * var(--rubber));
+  height: calc(12 * var(--rubber));
+  animation-delay: -1.5s;
+}
+
+/* секция 2 */
+.section_2 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  background-color: #161616;
+  flex-direction: row;
+}
+
+.circle-block {
+  position: relative;
+  width: calc(25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-background {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.insect-halftone {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ТРЕТЬЯ ЧАСТЬ */
+
+/* бегущая строка */
+.marquee-section {
+  width: 100%;
+  height: 200px;
+  background-color: #73c431;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-svg {
+  height: 180px;
+  margin: 10px 50px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+}
+
+/* блок с падающими буквами */
+.falling-letters-section {
+  flex: 1;
+  min-width: 0;
+  min-height: 600px;
+  background-image: url("../images/section_3/background.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.falling-letter {
+  height: 120px;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.falling-letter:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translateY(-650px) rotate(15deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(15deg);
+  }
+}
+@keyframes fall-2 {
+  0% {
+    transform: translateY(-650px) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-25deg);
+  }
+}
+@keyframes fall-3 {
+  0% {
+    transform: translateY(-650px) rotate(35deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(35deg);
+  }
+}
+@keyframes fall-4 {
+  0% {
+    transform: translateY(-650px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-10deg);
+  }
+}
+@keyframes fall-5 {
+  0% {
+    transform: translateY(-650px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(20deg);
+  }
+}
+@keyframes fall-6 {
+  0% {
+    transform: translateY(-650px) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-30deg);
+  }
+}
+@keyframes fall-7 {
+  0% {
+    transform: translateY(-650px) rotate(12deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(12deg);
+  }
+}
+@keyframes fall-8 {
+  0% {
+    transform: translateY(-650px) rotate(-18deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-18deg);
+  }
+}
+@keyframes fall-9 {
+  0% {
+    transform: translateY(-650px) rotate(28deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(28deg);
+  }
+}
+@keyframes fall-10 {
+  0% {
+    transform: translateY(-650px) rotate(-22deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-22deg);
+  }
+}
+@keyframes fall-11 {
+  0% {
+    transform: translateY(-650px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(8deg);
+  }
+}
+.fall-1 {
+  animation-name: fall-1;
+}
+.fall-2 {
+  animation-name: fall-2;
+}
+.fall-3 {
+  animation-name: fall-3;
+}
+.fall-4 {
+  animation-name: fall-4;
+}
+.fall-5 {
+  animation-name: fall-5;
+}
+.fall-6 {
+  animation-name: fall-6;
+}
+.fall-7 {
+  animation-name: fall-7;
+}
+.fall-8 {
+  animation-name: fall-8;
+}
+.fall-9 {
+  animation-name: fall-9;
+}
+.fall-10 {
+  animation-name: fall-10;
+}
+.fall-11 {
+  animation-name: fall-11;
+}
+
+.right-container {
+  width: 38%;
+  min-width: 300px;
+  max-width: 720px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* блок "РИСУЙ ЖУЧКА" */
+.draw-section {
+  width: 100%;
+  height: 35%;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.draw-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.draw-letter {
+  height: 60px;
+  filter: blur(5px);
+  transition: all 0.4s ease;
+}
+
+.draw-section:hover .draw-letter {
+  filter: blur(0);
+  transform: scale(1.3);
+}
+
+/* блок с кружочками */
+.circles-section {
+  width: 100%;
+  height: 65%;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.circle {
+  width: calc((100% - 13px) / 14);
+  height: calc((100% - 14px) / 15);
+  max-width: 50px;
+  max-height: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #060000;
+  transition: background-color 3s ease;
+  cursor: pointer;
+  flex-shrink: 1;
+}
+
+.circle:hover {
+  background-color: #73c431;
+  transition-duration: 0.03s;
+}
+
+/* блок с муравьями */
+.ants-marquee-section {
+  width: 100%;
+  height: 200px;
+  background-color: #e8e8e8;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ants-marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  position: absolute;
+  width: max-content;
+  animation: ants-marquee 20s linear infinite;
+}
+
+.ants-marquee-section:has(.ant-wrapper:hover) .ants-marquee-content {
+  animation-play-state: paused;
+}
+
+.ants-marquee-section:has(.ant-wrapper:hover) .ant-wrapper {
+  animation-play-state: paused;
+}
+
+@keyframes ants-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ant-wrapper {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  cursor: pointer;
+}
+
+.ant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.ant-normal {
+  opacity: 1;
+}
+
+.ant-black {
+  display: none;
+}
+
+.ant-wrapper:hover .ant-normal {
+  filter: brightness(0) saturate(0);
+}
+
+/* анимация поворота муравьев */
+.ant-wrapper {
+  animation: ant-rotate 2s ease-in-out infinite;
+}
+
+.ant-wrapper:nth-child(2n) {
+  animation: ant-rotate-reverse 2.2s ease-in-out infinite;
+}
+
+.ant-wrapper:nth-child(3n) {
+  animation: ant-rotate 1.8s ease-in-out infinite;
+}
+
+.ant-wrapper:nth-child(4n) {
+  animation: ant-rotate-reverse 2.4s ease-in-out infinite;
+}
+
+@keyframes ant-rotate {
+  0% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes ant-rotate-reverse {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+/* блок со стрекозой */
+.dragonfly-section {
+  width: 30%;
+  min-width: 250px;
+  background-image: url("../images/section_3/мох_большой.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dragonfly {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.dragonfly:hover {
+  filter: blur(0);
+  animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-3px, -3px);
+  }
+  50% {
+    transform: translate(3px, 3px);
+  }
+  75% {
+    transform: translate(-3px, 3px);
+  }
+}
+
+/* блок с буквами "ЖДЁМ ТЕБЯ" */
+.letters-section {
+  width: 70%;
+  background-color: #c2ff91;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.letter-circle {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.5s ease;
+}
+
+/* фоны для каждой буквы */
+.letter-circle[data-letter="ж"] {
+  background-image: url("../images/section_3/лист.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.letter-circle[data-letter="д"] {
+  background-color: #2a2a2a;
+}
+
+.letter-circle[data-letter="ё"] {
+  background-image: url("../images/section_3/мох_малый.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.letter-circle[data-letter="м"] {
+  background-image: url("../images/section_3/дерево.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.letter-circle[data-letter="т"] {
+  background-color: #ededed;
+}
+
+.letter-circle[data-letter="е"] {
+  background-image: url("../images/section_3/мох_малый.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.letter-circle[data-letter="б"] {
+  background-image: url("../images/section_3/лист.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.letter-circle[data-letter="я"] {
+  background-color: #2a2a2a;
+}
+
+.circle-letter {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.letter-circle:hover .circle-letter {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* контейнер для стрекозы и букв */
+.bottom-container {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* нижняя бегущая строка */
+.footer-marquee-section {
+  width: 100%;
+  height: 200px;
+  background-color: #73c431;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer-marquee-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.footer-marquee-svg {
+  height: 180px;
+  margin: 10px 50px;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .marquee-section {
+    height: 150px;
+  }
+
+  .marquee-svg {
+    height: 130px;
+  }
+
+  .falling-letter {
+    height: 90px;
+  }
+
+  .draw-letter {
+    height: 45px;
+  }
+
+  .draw-section {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .bottom-container {
+    min-height: 300px;
+  }
+
+  .dragonfly {
+    max-width: 250px;
+  }
+
+  .letters-section {
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .footer-marquee-section {
+    height: 150px;
+  }
+
+  .footer-marquee-svg {
+    height: 130px;
+  }
+}
+
+/* Desktop 1280x720 WXGA */
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+  .marquee-section {
+    height: 130px;
+  }
+
+  .marquee-svg {
+    height: 110px;
+    margin: 10px 30px;
+  }
+
+  .falling-letter {
+    height: 80px;
+  }
+
+  .draw-letter {
+    height: 40px;
+  }
+
+  .draw-section {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .draw-line {
+    gap: 8px;
+  }
+
+  .bottom-container {
+    min-height: 280px;
+  }
+
+  .dragonfly {
+    max-width: 220px;
+  }
+
+  .letters-section {
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .footer-marquee-section {
+    height: 130px;
+  }
+
+  .footer-marquee-svg {
+    height: 110px;
+    margin: 10px 30px;
+  }
+}
+
+/* Desktop 1024x768 XGA */
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .marquee-section {
+    height: 120px;
+  }
+
+  .marquee-svg {
+    height: 100px;
+    margin: 10px 25px;
+  }
+
+  .falling-letter {
+    height: 70px;
+  }
+
+  .draw-letter {
+    height: 35px;
+  }
+
+  .draw-section {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .right-container {
+    min-width: 280px;
+  }
+
+  .bottom-container {
+    min-height: 250px;
+  }
+
+  .dragonfly {
+    max-width: 200px;
+  }
+
+  .letters-section {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .footer-marquee-section {
+    height: 120px;
+  }
+
+  .footer-marquee-svg {
+    height: 100px;
+    margin: 10px 25px;
+  }
+}
+
+/* Tablet 768x1024 XGA (Portrait) */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .marquee-section {
+    height: 100px;
+  }
+
+  .marquee-svg {
+    height: 80px;
+    margin: 10px 20px;
+  }
+
+  .falling-letters-section {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .falling-letter {
+    height: 60px;
+  }
+
+  .right-container {
+    width: 100%;
+    min-height: 400px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .draw-section {
+    min-height: 150px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .draw-letter {
+    height: 30px;
+  }
+
+  .draw-line {
+    gap: 5px;
+  }
+
+  .circles-section {
+    min-height: 250px;
+    padding: 5px;
+  }
+
+  .circle {
+    width: calc((100% - 13px) / 14);
+    height: calc((100% - 9px) / 10);
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .dragonfly-section {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .letters-section {
+    width: 100%;
+    min-height: 300px;
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .dragonfly {
+    max-width: 250px;
+  }
+
+  .footer-marquee-section {
+    height: 100px;
+  }
+
+  .footer-marquee-svg {
+    height: 80px;
+    margin: 10px 20px;
+  }
+}
+
+/* Mobile 414x896 (iPhone) */
+@media screen and (max-width: 414px) {
+  .marquee-section {
+    height: 80px;
+  }
+
+  .marquee-svg {
+    height: 60px;
+    margin: 10px 15px;
+  }
+
+  .falling-letters-section {
+    min-height: 300px;
+  }
+
+  .falling-letter {
+    height: 45px;
+  }
+
+  .right-container {
+    min-height: 350px;
+  }
+
+  .draw-section {
+    min-height: 120px;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .draw-letter {
+    height: 22px;
+  }
+
+  .draw-line {
+    gap: 3px;
+  }
+
+  .circles-section {
+    min-height: 230px;
+    padding: 3px;
+    gap: 0.5px;
+  }
+
+  .circle {
+    width: calc((100% - 9px) / 10);
+    height: calc((100% - 9px) / 10);
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  .dragonfly-section {
+    min-height: 200px;
+  }
+
+  .letters-section {
+    min-height: 250px;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .dragonfly {
+    max-width: 180px;
+  }
+
+  .footer-marquee-section {
+    height: 80px;
+  }
+
+  .footer-marquee-svg {
+    height: 60px;
+    margin: 10px 15px;
+  }
+}
+
+/* Mobile 360x640 nHD (Android) */
+@media screen and (max-width: 360px) and (max-height: 640px) {
+  .marquee-section {
+    height: 60px;
+  }
+
+  .marquee-svg {
+    height: 45px;
+    margin: 8px 12px;
+  }
+
+  .falling-letters-section {
+    min-height: 250px;
+  }
+
+  .falling-letter {
+    height: 35px;
+  }
+
+  .right-container {
+    min-height: 300px;
+  }
+
+  .draw-section {
+    min-height: 100px;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .draw-letter {
+    height: 18px;
+  }
+
+  .draw-line {
+    gap: 2px;
+  }
+
+  .circles-section {
+    min-height: 200px;
+    padding: 2px;
+    gap: 0.5px;
+  }
+
+  .circle {
+    width: calc((100% - 7px) / 8);
+    height: calc((100% - 7px) / 8);
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .draw-section:hover .draw-letter {
+    transform: scale(1.1);
+  }
+
+  .dragonfly-section {
+    min-height: 180px;
+  }
+
+  .letters-section {
+    min-height: 220px;
+    gap: 4px;
+    padding: 8px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dragonfly {
+    max-width: 150px;
+  }
+
+  .footer-marquee-section {
+    height: 60px;
+  }
+
+  .footer-marquee-svg {
+    height: 45px;
+    margin: 8px 12px;
+  }
+}
