@@ -19,15 +19,6 @@ body {
   padding: 0;
 }
 
-/* фон макета 1366×768 WXGA */
-/* .pixel-perfect-image {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.5;
-} */
-
 /* секция 1 */
 .section_1 {
   position: relative;
@@ -214,6 +205,7 @@ body {
   width: 100%;
   background-color: #161616;
   flex-direction: row;
+  padding: 0.5%;
 }
 
 .circle-block {
@@ -230,12 +222,21 @@ body {
   z-index: 1;
 }
 
+/* насекомые и лягушка в кружках */
 .insect-halftone {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.insect-halftone:hover {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 /* ТРЕТЬЯ ЧАСТЬ */
@@ -250,13 +251,16 @@ body {
   display: flex;
   align-items: center;
 }
-
 .marquee-content {
   display: flex;
   align-items: center;
   position: absolute;
   width: max-content;
   animation: marquee 30s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
 }
 
 .marquee-svg {
@@ -284,7 +288,7 @@ body {
 }
 
 .falling-letter {
-  height: 120px;
+  height: 30vh;
   position: absolute;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -341,21 +345,19 @@ body {
 /* блок "РИСУЙ ЖУЧКА" */
 .draw-section {
   width: 100%;
-  height: 35%;
+  height: 40%;
   background-color: #161616;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 30px;
+  padding-top: 14%;
+  padding-bottom: 16%;
   transition: all 0.3s ease;
 }
 
 .draw-line {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -368,7 +370,7 @@ body {
 
 .draw-section:hover .draw-letter {
   filter: blur(0);
-  transform: scale(1.3);
+  transform: scale(2);
 }
 
 /* блок с кружочками */
@@ -381,7 +383,7 @@ body {
   justify-content: center;
   align-content: center;
   gap: 1px;
-  padding: 10px;
+  padding: 0.5%;
   overflow: hidden;
 }
 
@@ -512,7 +514,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
-  padding: 20px;
+  padding: 5px;
 }
 
 .letter-circle {
@@ -531,9 +533,10 @@ body {
 
 /* фоны для каждой буквы */
 .letter-circle[data-letter="ж"] {
-  background-image: url("../images/section_3/лист.png");
+  background-image: url("../images/section_3/leaf-new.png");
   background-size: cover;
   background-position: center;
+  border-radius: 50%;
 }
 
 .letter-circle[data-letter="д"] {
@@ -541,15 +544,16 @@ body {
 }
 
 .letter-circle[data-letter="ё"] {
-  background-image: url("../images/section_3/moss-little.png");
+  background-image: url("../images/section_3/moss-1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .letter-circle[data-letter="м"] {
-  background-image: url("../images/section_3/дерево.png");
+  background-image: url("../images/section_3/bark.jpg");
   background-size: cover;
   background-position: center;
+  /* border-radius: 50%; */
 }
 
 .letter-circle[data-letter="т"] {
@@ -557,13 +561,13 @@ body {
 }
 
 .letter-circle[data-letter="е"] {
-  background-image: url("../images/section_3/moss-little.png");
+  background-image: url("../images/section_3/bark-moss.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .letter-circle[data-letter="б"] {
-  background-image: url("../images/section_3/лист.png");
+  background-image: url("../images/section_3/leaf-new.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -610,6 +614,9 @@ body {
   position: absolute;
   width: max-content;
   animation: marquee 20s linear infinite;
+}
+.footer-marquee-content:hover {
+  animation-play-state: paused;
 }
 
 .footer-marquee-svg {
