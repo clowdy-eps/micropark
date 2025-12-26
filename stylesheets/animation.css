@@ -1,3 +1,4 @@
+/* анимация вращения круга*/
 .main-circle {
   animation: spin-circle 20s linear infinite;
 }
@@ -6,7 +7,6 @@
   animation-play-state: paused;
 }
 
-/* Анимация вращения круга*/
 @keyframes spin-circle {
   0% {
     transform: rotate(0deg);
@@ -16,6 +16,7 @@
   }
 }
 
+/* анимация пульсации кружков */
 .dot {
   transition: background-color 0.8s ease-out, transform 0.3s ease;
 }
@@ -47,7 +48,6 @@
   }
 }
 
-/* Классы, запускающие анимацию */
 .big {
   animation-name: pulse-shrink;
   animation-duration: 2s;
@@ -60,4 +60,157 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+/* анимация бегущей строки */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* анимация падающих букв */
+@keyframes fall-1 {
+  0% {
+    transform: translateY(-650px) rotate(15deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(15deg);
+  }
+}
+@keyframes fall-2 {
+  0% {
+    transform: translateY(-650px) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-25deg);
+  }
+}
+@keyframes fall-3 {
+  0% {
+    transform: translateY(-650px) rotate(35deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(35deg);
+  }
+}
+@keyframes fall-4 {
+  0% {
+    transform: translateY(-650px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-10deg);
+  }
+}
+@keyframes fall-5 {
+  0% {
+    transform: translateY(-650px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(20deg);
+  }
+}
+@keyframes fall-6 {
+  0% {
+    transform: translateY(-650px) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-30deg);
+  }
+}
+@keyframes fall-7 {
+  0% {
+    transform: translateY(-650px) rotate(12deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(12deg);
+  }
+}
+@keyframes fall-8 {
+  0% {
+    transform: translateY(-650px) rotate(-18deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-18deg);
+  }
+}
+@keyframes fall-9 {
+  0% {
+    transform: translateY(-650px) rotate(28deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(28deg);
+  }
+}
+@keyframes fall-10 {
+  0% {
+    transform: translateY(-650px) rotate(-22deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(-22deg);
+  }
+}
+@keyframes fall-11 {
+  0% {
+    transform: translateY(-650px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(1100px) rotate(8deg);
+  }
+}
+
+/* анимация муравьев */
+@keyframes ants-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* поворот муравьев */
+
+@keyframes ant-rotate {
+  0% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes ant-rotate-reverse {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+/*  тряска стрекозы */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-3px, -3px);
+  }
+  50% {
+    transform: translate(3px, 3px);
+  }
+  75% {
+    transform: translate(-3px, 3px);
+  }
 }

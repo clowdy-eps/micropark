@@ -81,3 +81,391 @@
     transform: rotate(-180deg);
   }
 }
+
+/* АДАПТИВ */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .marquee-section {
+    height: 150px;
+  }
+
+  .marquee-svg {
+    height: 130px;
+  }
+
+  .falling-letter {
+    height: 90px;
+  }
+
+  .draw-letter {
+    height: 45px;
+  }
+
+  .draw-section {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .bottom-container {
+    min-height: 300px;
+  }
+
+  .dragonfly {
+    max-width: 250px;
+  }
+
+  .letters-section {
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .footer-marquee-section {
+    height: 150px;
+  }
+
+  .footer-marquee-svg {
+    height: 130px;
+  }
+}
+
+/* Desktop 1280x720 WXGA */
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+  .marquee-section {
+    height: 130px;
+  }
+
+  .marquee-svg {
+    height: 110px;
+    margin: 10px 30px;
+  }
+
+  .falling-letter {
+    height: 80px;
+  }
+
+  .draw-letter {
+    height: 40px;
+  }
+
+  .draw-section {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .draw-line {
+    gap: 8px;
+  }
+
+  .bottom-container {
+    min-height: 280px;
+  }
+
+  .dragonfly {
+    max-width: 220px;
+  }
+
+  .letters-section {
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .footer-marquee-section {
+    height: 130px;
+  }
+
+  .footer-marquee-svg {
+    height: 110px;
+    margin: 10px 30px;
+  }
+}
+
+/* Desktop 1024x768 XGA */
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .marquee-section {
+    height: 120px;
+  }
+
+  .marquee-svg {
+    height: 100px;
+    margin: 10px 25px;
+  }
+
+  .falling-letter {
+    height: 70px;
+  }
+
+  .draw-letter {
+    height: 35px;
+  }
+
+  .draw-section {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .right-container {
+    min-width: 280px;
+  }
+
+  .bottom-container {
+    min-height: 250px;
+  }
+
+  .dragonfly {
+    max-width: 200px;
+  }
+
+  .letters-section {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .footer-marquee-section {
+    height: 120px;
+  }
+
+  .footer-marquee-svg {
+    height: 100px;
+    margin: 10px 25px;
+  }
+}
+
+/* Tablet 768x1024 XGA (Portrait) */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .marquee-section {
+    height: 100px;
+  }
+
+  .marquee-svg {
+    height: 80px;
+    margin: 10px 20px;
+  }
+
+  .falling-letters-section {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .falling-letter {
+    height: 60px;
+  }
+
+  .right-container {
+    width: 100%;
+    min-height: 400px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .draw-section {
+    min-height: 150px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .draw-letter {
+    height: 30px;
+  }
+
+  .draw-line {
+    gap: 5px;
+  }
+
+  .circles-section {
+    min-height: 250px;
+    padding: 5px;
+  }
+
+  .circle {
+    width: calc((100% - 13px) / 14);
+    height: calc((100% - 9px) / 10);
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .dragonfly-section {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .letters-section {
+    width: 100%;
+    min-height: 300px;
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .dragonfly {
+    max-width: 250px;
+  }
+
+  .footer-marquee-section {
+    height: 100px;
+  }
+
+  .footer-marquee-svg {
+    height: 80px;
+    margin: 10px 20px;
+  }
+}
+
+/* Mobile 414x896 (iPhone) */
+@media screen and (max-width: 414px) {
+  .marquee-section {
+    height: 80px;
+  }
+
+  .marquee-svg {
+    height: 60px;
+    margin: 10px 15px;
+  }
+
+  .falling-letters-section {
+    min-height: 300px;
+  }
+
+  .falling-letter {
+    height: 45px;
+  }
+
+  .right-container {
+    min-height: 350px;
+  }
+
+  .draw-section {
+    min-height: 120px;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .draw-letter {
+    height: 22px;
+  }
+
+  .draw-line {
+    gap: 3px;
+  }
+
+  .circles-section {
+    min-height: 230px;
+    padding: 3px;
+    gap: 0.5px;
+  }
+
+  .circle {
+    width: calc((100% - 9px) / 10);
+    height: calc((100% - 9px) / 10);
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+  .dragonfly-section {
+    min-height: 200px;
+  }
+
+  .letters-section {
+    min-height: 250px;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .dragonfly {
+    max-width: 180px;
+  }
+
+  .footer-marquee-section {
+    height: 80px;
+  }
+
+  .footer-marquee-svg {
+    height: 60px;
+    margin: 10px 15px;
+  }
+}
+
+/* Mobile 360x640 nHD (Android) */
+@media screen and (max-width: 360px) and (max-height: 640px) {
+  .marquee-section {
+    height: 60px;
+  }
+
+  .marquee-svg {
+    height: 45px;
+    margin: 8px 12px;
+  }
+
+  .falling-letters-section {
+    min-height: 250px;
+  }
+
+  .falling-letter {
+    height: 35px;
+  }
+
+  .right-container {
+    min-height: 300px;
+  }
+
+  .draw-section {
+    min-height: 100px;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .draw-letter {
+    height: 18px;
+  }
+
+  .draw-line {
+    gap: 2px;
+  }
+
+  .circles-section {
+    min-height: 200px;
+    padding: 2px;
+    gap: 0.5px;
+  }
+
+  .circle {
+    width: calc((100% - 7px) / 8);
+    height: calc((100% - 7px) / 8);
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .draw-section:hover .draw-letter {
+    transform: scale(1.1);
+  }
+
+  .dragonfly-section {
+    min-height: 180px;
+  }
+
+  .letters-section {
+    min-height: 220px;
+    gap: 4px;
+    padding: 8px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dragonfly {
+    max-width: 150px;
+  }
+
+  .footer-marquee-section {
+    height: 60px;
+  }
+
+  .footer-marquee-svg {
+    height: 45px;
+    margin: 8px 12px;
+  }
+}
