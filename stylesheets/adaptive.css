@@ -300,64 +300,36 @@
 }
 
 /* Mobile 414x896 (iPhone) */
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   :root {
     --rubber: calc(100vw / 414);
   }
 
   .section_1 {
-    flex-direction: column; /* Вертикальный стек */
-    justify-content: space-between; /* Распределяем: верх, центр, низ */
-    align-items: center;
-    padding: calc(40 * var(--rubber)) 0; /* Отступы сверху и снизу */
-    height: 100vh; /* Фиксируем высоту секции по экрану */
-    overflow: hidden; /* Обрезаем всё лишнее */
-  }
-
-  .main-circle {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-    margin: 0;
-    order: 2;
-    /* Размер круга под мобилку */
-    width: calc(340 * var(--rubber));
-    height: calc(340 * var(--rubber));
-  }
-
-  /* Общие стили для сеток с точками */
-  .grid-container {
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Позволяем перенос, но... */
-    justify-content: space-evenly; /* Равномерное распределение по ширине */
-    align-content: flex-start; /* Прижимаем к верху контейнера */
-
-    height: calc(60 * var(--rubber));
-    overflow: hidden; /* Скрываем все лишние точки (2-й, 3-й ряды) */
-
-    gap: 0; /* Убираем gap, управляем через space-evenly */
-    padding: 0 calc(10 * var(--rubber)); /* Небольшие отступы по бокам */
-  }
-
-  /* Верхняя полоса точек */
-  .left-grid {
-    order: 1;
-  }
-
-  /* Нижняя полоса точек */
-  .right-grid {
-    order: 3;
-    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    overflow: hidden;
   }
 
   .dot-wrapper {
-    transform: scale(0.6);
+    display: none;
   }
 
-  /*  */
+  .dot {
+    display: none;
+  }
+
+  .main-circle {
+    width: calc(400 * var(--rubber));
+  }
+
+  .grid-container {
+    display: none;
+  }
 
   .marquee-section {
     height: 80px;
@@ -433,6 +405,19 @@
 
 /* Mobile 360x640 nHD (Android) */
 @media screen and (max-width: 360px) and (max-height: 640px) {
+  :root {
+    --rubber: calc(100vw / 360);
+  }
+
+  .section_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    overflow: hidden;
+  }
   .marquee-section {
     height: 60px;
   }
