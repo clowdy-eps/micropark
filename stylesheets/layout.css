@@ -2,17 +2,12 @@
   box-sizing: border-box;
 }
 
-:root {
-  --rubber: calc(100vw / 1920);
-}
-
 body {
   background-color: #73c431;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
   margin: 0;
@@ -20,6 +15,11 @@ body {
 }
 
 /* секция 1 */
+
+:root {
+  --rubber: calc(100vw / 1920);
+}
+
 .section_1 {
   position: relative;
   overflow: hidden;
@@ -63,6 +63,14 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  border-radius: 50%;
+}
+
+.main-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* размеры точек */
@@ -235,11 +243,16 @@ body {
   transition: all 0.3s ease;
 }
 
+.insect-halftone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .insect-halftone:hover {
   transform: translate(-50%, -50%) scale(1.5);
 }
-
-/* ТРЕТЬЯ ЧАСТЬ */
 
 /* бегущая строка */
 .marquee-section {

@@ -1,88 +1,4 @@
-/* === ADAPTIVE.CSS: Планшеты и Телефоны === */
-
-/* --- TABLET (До 1024px) --- */
-@media (max-width: 1024px) {
-  :root {
-    /* Меняем базу для расчета резины на 1024px */
-    --rubber: calc(100vw / 1024);
-  }
-
-  .grid-container {
-    /* Уменьшаем количество колонок до 3 */
-    grid-template-columns: repeat(3, calc(60 * var(--rubber)));
-    width: 25%;
-  }
-
-  .main-circle {
-    width: calc(600 * var(--rubber));
-    height: calc(600 * var(--rubber));
-  }
-}
-
-/* --- MOBILE (До 768px: iPhone, Android) --- */
-@media (max-width: 768px) {
-  :root {
-    /* Меняем базу для расчета резины на ширину iPhone (414px) */
-    --rubber: calc(100vw / 414);
-  }
-
-  .section_1 {
-    flex-direction: column; /* Вертикальный столб */
-    justify-content: space-between;
-    padding: calc(20 * var(--rubber));
-  }
-
-  .main-circle {
-    /* Сбрасываем абсолютное позиционирование */
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-
-    width: calc(320 * var(--rubber));
-    height: calc(320 * var(--rubber));
-    margin: calc(20 * var(--rubber)) 0;
-
-    /* Ставим в центр потока */
-    order: 2;
-  }
-
-  .grid-container {
-    width: 100%;
-    height: auto;
-
-    /* Сетка растягивается на 6 колонок */
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: calc(40 * var(--rubber));
-    gap: calc(10 * var(--rubber));
-
-    /* Сбрасываем rtl направление */
-    direction: ltr !important;
-    justify-content: center;
-  }
-
-  .left-grid {
-    order: 1; /* Встает сверху */
-    max-height: calc(180 * var(--rubber));
-    overflow: hidden;
-  }
-
-  .right-grid {
-    order: 3; /* Встает снизу */
-    max-height: calc(180 * var(--rubber));
-    overflow: hidden;
-
-    /* Переворачиваем нижнюю сетку, чтобы рамка была зеркальной */
-    transform: rotate(180deg);
-  }
-
-  /* Возвращаем точки в нормальное положение, чтобы тень не перевернулась (если она будет) */
-  .right-grid .dot {
-    transform: rotate(-180deg);
-  }
-}
-
-/* АДАПТИВ */
+/* 1366×768 WXGA */
 @media screen and (max-width: 1366px) and (max-height: 768px) {
   .marquee-section {
     height: 150px;
@@ -179,7 +95,40 @@
 }
 
 /* Desktop 1024x768 XGA */
-@media screen and (max-width: 1024px) and (max-height: 768px) {
+@media (max-width: 1024px) {
+  :root {
+    --rubber: calc(100vw / 1024);
+  }
+  .section_1 {
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-circle {
+    width: calc(480 * var(--rubber));
+    height: calc(480 * var(--rubber));
+    flex-shrink: 0;
+    margin: 0 90px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, calc(80 * var(--rubber)));
+    grid-auto-rows: calc(70 * var(--rubber));
+    gap: calc(10 * var(--rubber));
+    width: auto;
+    margin-left: -5px;
+    margin-right: -5px;
+    transform: scale(0.9);
+  }
+  .grid-container .dot-wrapper:nth-child(n + 17) {
+    display: none;
+  }
+
+  .insect-halftone {
+    width: 95px;
+    height: auto;
+  }
   .marquee-section {
     height: 120px;
   }
@@ -230,7 +179,40 @@
 }
 
 /* Tablet 768x1024 XGA (Portrait) */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  :root {
+    --rubber: calc(100vw / 1200);
+  }
+
+  .section_1 {
+    width: 100%;
+    height: 50vh;
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .main-circle {
+    width: calc(500 * var(--rubber));
+    height: calc(500 * var(--rubber));
+  }
+
+  .section_2 {
+    flex-wrap: wrap;
+  }
+
+  .circle-block {
+    width: calc(50%);
+  }
+
+  .insect-halftone {
+    width: 140px;
+    height: auto;
+  }
+
   .main-container {
     flex-direction: column;
   }
@@ -319,6 +301,64 @@
 
 /* Mobile 414x896 (iPhone) */
 @media screen and (max-width: 414px) {
+  :root {
+    --rubber: calc(100vw / 414);
+  }
+
+  .section_1 {
+    flex-direction: column; /* Вертикальный стек */
+    justify-content: space-between; /* Распределяем: верх, центр, низ */
+    align-items: center;
+    padding: calc(40 * var(--rubber)) 0; /* Отступы сверху и снизу */
+    height: 100vh; /* Фиксируем высоту секции по экрану */
+    overflow: hidden; /* Обрезаем всё лишнее */
+  }
+
+  .main-circle {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 0;
+    order: 2;
+    /* Размер круга под мобилку */
+    width: calc(340 * var(--rubber));
+    height: calc(340 * var(--rubber));
+  }
+
+  /* Общие стили для сеток с точками */
+  .grid-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Позволяем перенос, но... */
+    justify-content: space-evenly; /* Равномерное распределение по ширине */
+    align-content: flex-start; /* Прижимаем к верху контейнера */
+
+    height: calc(60 * var(--rubber));
+    overflow: hidden; /* Скрываем все лишние точки (2-й, 3-й ряды) */
+
+    gap: 0; /* Убираем gap, управляем через space-evenly */
+    padding: 0 calc(10 * var(--rubber)); /* Небольшие отступы по бокам */
+  }
+
+  /* Верхняя полоса точек */
+  .left-grid {
+    order: 1;
+  }
+
+  /* Нижняя полоса точек */
+  .right-grid {
+    order: 3;
+    align-content: flex-end;
+  }
+
+  .dot-wrapper {
+    transform: scale(0.6);
+  }
+
+  /*  */
+
   .marquee-section {
     height: 80px;
   }
@@ -372,7 +412,7 @@
   }
 
   .letters-section {
-    min-height: 250px;
+    min-height: 150px;
     gap: 5px;
     padding: 10px;
   }
