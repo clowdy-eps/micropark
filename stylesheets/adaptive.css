@@ -398,7 +398,7 @@
 /* Mobile 360x640 nHD (Android) */
 @media screen and (max-width: 360px) and (max-height: 640px) {
   :root {
-    --rubber: calc(100vw / 360);
+    --rubber: calc(100vw / 414);
   }
 
   .section_1 {
