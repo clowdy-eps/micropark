@@ -56,12 +56,13 @@ body {
 
 /* цетральный круг */
 .main-circle {
-  width: calc(1100 * var(--rubber));
-  height: calc(1100 * var(--rubber));
+  width: calc(900 * var(--rubber));
+  height: calc(900 * var(--rubber));
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin-left: 30px;
+  margin-right: 30px;
   padding: 0;
   border-radius: 50%;
 }
