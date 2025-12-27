@@ -319,10 +319,6 @@
     width: calc(400 * var(--rubber));
   }
 
-  .grid-container {
-    display: none;
-  }
-
   .marquee-section {
     height: 80px;
   }
